@@ -36,9 +36,9 @@ phases:
       - npm install
   build:
     commands:
-      - yarn build
       - npm i -g node-prune
       - ./scripts/trim-node-modules.sh
+      - yarn build
   #post_build:
     #commands:
       # - command
