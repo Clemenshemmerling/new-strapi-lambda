@@ -31,13 +31,13 @@ phases:
       # - command
   pre_build:
     commands:
+      - npm i -g node-prune
+      - ./scripts/trim-node-modules.sh
       - chmod +x scripts/post-build.sh
       - chmod +x scripts/trim-node-modules.sh
       - npm install
   build:
     commands:
-      - npm i -g node-prune
-      - ./scripts/trim-node-modules.sh
       - yarn build
   #post_build:
     #commands:
